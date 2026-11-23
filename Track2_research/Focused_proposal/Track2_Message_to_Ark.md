@@ -1,0 +1,5 @@
+# Slack draft for Ark
+
+Hey Ark, I’d propose that our Track 2 project test whether passage-level metrics can improve on the usual diagnosis for wrong answers with gold already in the workspace. We can use our existing 100 BM25/SPLADE pairs and check whether the agent saw the right lead, reached the decisive passage, and had enough evidence before answering. The current audit gives us cases of missed reads, clipped output, and an incomplete answer after sufficient evidence. I’d do a small blinded review to check which diagnoses are reproducible and report the cases where the logs leave us unsure.
+
+For Jingfen’s query point, I’d add a secondary comparison of how much new gold each search batch adds under the same archived ranker. We have complete manifest coverage for the BM25 query histories and sparse coverage of the SPLADE histories, so we can compare rankers on fixed strings but can’t fairly compare the two query policies. Does that sound like the right scope? If so, can we agree on the metrics and split the annotation pilot before implementing anything?
